@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  font-family: "Roboto", sans-serif;
+  font-size: 1vw;
+  font-style: normal;
+  color: rgb(168, 168, 168);
+}
+
+/*
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+*/
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Utility Section starts here */
+
+.left {
+  width: 25vw;
+  height: 80vh;
+  /* padding: 5px 5px 15px 15px; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* background-color: #121212; */
+
+}
+
+.right {
+  /* top | right | bottom | left */
+
+  /* padding: 5px 15px 15px 5px; */
+  width: 73vw;
+  height: 80vh;
+
+}
+
+.seekbar-song-control{
+  width: 98vw;
+}
+
+.bg-gray {
+  background-color: #121212;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-light-gray {
+  background-color: #242424;
+}
+
+.bg-dark-gray {
+  background-color: #101010;
+}
+
+
+.mh-8vh {
+  min-height: 8vh;
+}
+
+.icons {
+  width: 20px;
+}
+
+.border-radius {
+  border-radius: 5px;
+}
+
+.p-1 {
+  padding: 15px;
+}
+
+.p-2 {
+  padding: 20px;
+}
+
+.bpd-1 {
+  padding-bottom: 10px;
+}
+
+.bpd-2 {
+  padding-bottom: 20px;
+}
+
+
+.flex {
+  display: flex;
+}
+
+
+.g-1 {
+  gap: 10px;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.circle {
+  padding: 10px;
+  border-radius: 80px;
+}
+
+.hover:hover {
+  color: white;
+}
+
+/* Utility Section ends here */
+
+
+body {
+  background-color: black;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.right-left {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  height: 80vh;
+  width: 100%;
+
+}
+
+.home{
+  height: 10vh;
+}
+
+.close-button {
+  display: none;
+
+}
+
+
+.home-icons-text {
+  display: flex;
+  gap: 8px;
+  color: rgb(168, 168, 168);
+  text-decoration: none;
+}
+
+.home-icons-text:hover {
+  color: white;
+}
+
+
+/* .left .home-search a img{
+  width: 20px;
+} */
+
+.library {
+  height: 70vh;
+}
+
+.lib-icon-text {
+  padding-bottom: 15px;
+}
+
+.playlist-podcasts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.create-playlist {
+  height: 16vh;
+  font-size: 14px;
+  font-weight: 700;
+  /* padding-bottom: 20px; */
+
+}
+
+.my-playlist {
+  color: white;
+  padding-bottom: 10px;
+}
+
+.song-lists {
+  padding: 10px 10px 0 10px;
+  height: 10vh;
+  overflow: auto;
+}
+
+.song-lists::-webkit-scrollbar {
+  width: 12px;
+}
+
+.song-lists::-webkit-scrollbar-thumb {
+  background-color: #333;
+  /* Dark color for the thumb */
+  border-radius: 6px;
+}
+
+.song-lists::-webkit-scrollbar-track {
+  background-color: #222;
+  /* Dark color for the track */
+}
+
+.my-songs {
+
+  padding: 6px;
+
+}
+
+.my-songs img {
+  width: 20px;
+
+}
+
+.song-info {
+  display: flex;
+  gap: 10px;
+}
+
+.song-info img {
+  width: 20px;
+}
+
+.create-playlist ul {
+  padding: 0;
+}
+
+.song-lists ul li {
+  margin: 5px;
+  list-style: none;
+  border: 1px solid white;
+  border-radius: 5px;
+
+}
+
+
+
+
+
+.browse-podcasts {
+  height: 15vh;
+  /* padding-bottom: 20px; */
+
+}
+
+.left-footer {
+  /* top | right | bottom | left */
+
+  padding: 10px 15px 10px 15px;
+  font-size: 10px;
+  height: 10vh;
+
+}
+
+
+.left-footer ul {
+  padding-top: 10px;
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.left-footer ul li {
+  list-style: none;
+}
+
+.left-footer ul li a {
+  text-decoration: none;
+  color: rgb(168, 168, 168);
+}
+
+.left-footer ul li a:hover {
+  color: white;
+}
+
+.left-footer p a {
+  text-decoration: none;
+  color: rgb(168, 168, 168);
+}
+
+.left-footer p a:hover {
+  color: white;
+}
+
+.language {
+  justify-content: center;
+  gap: 5px;
+  background-color: transparent;
+  color: white;
+  align-items: center;
+  /* top | right | bottom | left */
+
+  padding: 10px 20px 10px 20px;
+  border: 1px solid white;
+  border-radius: 30px;
+  cursor: pointer;
+
+}
+
+/* .language:hover{
+  border: 2px solid white;
+
+} */
+
+.language p {
+  font-size: 12px;
+}
+
+.language img {
+  width: 15px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  /* border: none; */
+  background-color: white;
+}
+
+/* .create-playlist{
+  padding: 20px;
+  min-height: 8vh;
+} */
+
+.right{
+  height: 80vh;
+}
+
+.nav {
+  height: 5vh;
+  padding: 8px 15px 4px 15px;
+  /* (first radius values) / top-left | top-right | bottom-right | bottom-left */
+  border-radius: 5px 5px 0 0;
+
+}
+
+.menu-button {
+  display: none;
+}
+
+.circle {
+  border-radius: 80px;
+  padding: 10px;
+  background-color: #141414;
+}
+
+.arrow-button {
+  cursor: pointer;
+}
+
+.sign-up-btn {
+  padding: 5px 20px 5px 20px;
+  border-radius: 10px;
+  color: rgb(168, 168, 168);
+  /* background-color: rgba(39, 39, 39, 0.091); */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sign-up-btn:hover {
+  color: white;
+}
+
+.login-btn {
+  padding: 12px 35px 12px 35px;
+  border-radius: 35px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+
+}
+
+.login-btn:hover {
+  /* box-shadow: none; */
+  background-color: rgb(243, 242, 242);
+
+}
+
+
+.artists span a {
+  color: rgb(170, 167, 167);
+  text-decoration: none;
+}
+
+.songs-artists {
+  background-color: #1d1d1d;
+  height: 75vh;
+  border-radius: 0 0 5px 5px;
+}
+
+.carousel {
+  margin: 0 20px;
+  padding: 20px;
+  height: 15vh;
+  display: grid;
+  width: 75vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  position: relative;
+}
+
+.card-artist {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 10vw;
+  height: 12vw;
+  padding: 10px;
+  cursor: pointer;
+  justify-content: center;
+  float: left;
+  /* align-items: center; */
+
+}
+
+.card-artist:hover {
+  background-color: #302f2fa0;
+  color: white;
+
+
+}
+
+.card-artist h3 {
+  padding-bottom: 2.5px;
+}
+
+.artist-image{
+  align-items: center;
+  padding: 10px;
+  
+}
+
+.artist-image img {
+  width: 7vw;
+  border-radius: 100px;
+}
+
+.artist-name-title {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.seekbar-song-control {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  height: 5vh;
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-info {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.seekbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  position: relative;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 0 0 10px 0;
+  cursor: pointer;
+}
+
+.bar {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  cursor: pointer;
+}
+
+.seekbar-circle {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 10px;
+  left: 0;
+  transition: left 0.5s;
+  position: absolute;
+}
+
+
+/*     Media Query Starts here          */
+
+@media (max-width:1400px) {
+
+
+  .left {
+    position: absolute;
+    left: -110%;
+    transition: all 0.3s;
+    z-index: 1;
+    width: 433px;
+  }
+
+  .right {
+    width: 98vw;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .nav {
+    padding: 8px 15px 4px 15px;
+    margin: 0;
+  }
+
+
+
+  .menu-button {
+    display: block;
+    cursor: pointer;
+  }
+
+  .close-button {
+    display: block;
+    cursor: pointer;
+  }
+
+
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 35vh;
+    overflow: hidden;
+    padding: 5px;
+  }
+
+  .card-artist {
+    width: 30vw;
+    height: 40vh;
+    padding: 10px;
+
+  }
+
+  .card-artist img {
+    width: 20vw;
+    border-radius: 100vh;
+  }
+
+
+
+
+
+}
+
+
+@media (max-width:600px){
+
+  .artists{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .title{
+    margin: 0;
+    padding: 10px;
+    height: 2vw;
+  }
+  .carousel {
+    margin: 0;
+    padding: 10px; 
+    display: grid;
+    width: 98vw;
+    height: 44vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: minmax(20, 1fr);
+    flex-grow: 1;
+    /* gap: 10px; */
+    position: relative;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .card-artist {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 20vh;
+    padding: 10px;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 2vw;
+    /* align-items: center; */
+  
+  }
+  
+  .card-artist:hover {
+    background-color: #302f2fa0;
+    color: white;
+  
+  
+  }
+  
+  .card-artist h3 {
+    padding-bottom: 2.5px;
+  }
+  
+  .card-artist p {
+    padding-bottom: 5px;
+  }
+  
+  .artist-image{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    /* padding: 10px; */
+    
+  }
+  
+  .artist-image img {
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50px;
+  }
+
+}

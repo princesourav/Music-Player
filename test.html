@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewport Split</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+        .left-side {
+            width: 25%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .right-side {
+            width: 75%;
+            background-color: #e0e0e0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <!-- Content for left side -->
+            <p>This is the left side with 25% width.</p>
+        </div>
+        <div class="right-side">
+            <!-- Content for right side -->
+            <p>This is the right side with 75% width.</p>
+        </div>
+    </div>
+</body>
+</html>
